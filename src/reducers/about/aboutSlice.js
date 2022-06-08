@@ -1,14 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {aboutData} from "../../data/aboutData"
+import { aboutData } from "../../data/aboutData";
 
 // const initialState = {
-//   title: "",
-//   description1: "",
-//   description2: "",
-//   image: 2,
-// }
+//   visible: false,
+//   data: {
+//     title: "",
+//     description1: "",
+//     description2: "",
+//     image: 2,
+//   },
+// };
 
-const initialState = aboutData
+const initialState = {
+  visible: false,
+  data: aboutData,
+};
 
 export const aboutSlice = createSlice({
   name: "about",
@@ -18,7 +24,7 @@ export const aboutSlice = createSlice({
       state = action.payload;
     },
     clear: (state) => {
-      state = initialState
+      state = initialState;
     },
   },
 });

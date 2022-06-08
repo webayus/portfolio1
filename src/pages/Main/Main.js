@@ -21,7 +21,8 @@ import { headerData } from "../../data/headerData";
 import { useSelector } from 'react-redux'
 
 function Main() {
-  const aboutData = useSelector((state) => state.about);
+  const about = useSelector((state) => state.about);
+  const achievement = useSelector((state) => state.achievement);
 
   return (
     <div>
@@ -31,12 +32,12 @@ function Main() {
 
       <Navbar />
       <Landing />
-      <About aboutData={aboutData} />
+      {about.visible ? <About aboutData={about.data} /> : null}
       <Education />
       <Skills />
       <Experience />
       <Projects />
-      <Achievement />
+      {achievement.visible ? <Achievement achievementData={achievement.data}  /> : null}
       <Services />
       <Testimonials />
       <Blog />
