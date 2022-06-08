@@ -30,7 +30,7 @@ function Main() {
         <title>{headerData.name} - Porfolio</title>
       </Helmet>
 
-      <Navbar />
+      <Navbar about={about.visible} education={true} services={true} contacts={true} blog={true} />
       <Landing />
       {about.visible ? <About aboutData={about.data} /> : null}
       <Education />

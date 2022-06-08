@@ -14,7 +14,7 @@ import './Navbar.css';
 import { headerData } from '../../data/headerData';
 import { ThemeContext } from '../../contexts/ThemeContext';
 
-function Navbar() {
+function Navbar({about,education,blog,services,contacts}) {
     const { theme, setHandleDrawer } = useContext(ThemeContext);
 
     const [open, setOpen] = useState(false);
@@ -195,7 +195,7 @@ function Navbar() {
                             </NavLink>
                         </Fade>
 
-                        <Fade left>
+                        {about && <Fade left>
                             <NavLink
                                 to='/#about'
                                 smooth={true}
@@ -209,9 +209,9 @@ function Navbar() {
                                     </span>
                                 </div>
                             </NavLink>
-                        </Fade>
+                        </Fade>}
 
-                        <Fade left>
+                        {education && <Fade left>
                             <NavLink
                                 to='/#resume'
                                 smooth={true}
@@ -227,9 +227,9 @@ function Navbar() {
                                     </span>
                                 </div>
                             </NavLink>
-                        </Fade>
+                        </Fade>}
 
-                        <Fade left>
+                        {services && <Fade left>
                             <NavLink
                                 to='/#services'
                                 smooth={true}
@@ -246,8 +246,8 @@ function Navbar() {
                                 </div>
                             </NavLink>
                         </Fade>
-
-                        <Fade left>
+}
+                        {blog && <Fade left>
                             <NavLink
                                 to='/#blog'
                                 smooth={true}
@@ -263,9 +263,9 @@ function Navbar() {
                                     </span>
                                 </div>
                             </NavLink>
-                        </Fade>
+                        </Fade>}
 
-                        <Fade left>
+                        {contacts && <Fade left>
                             <NavLink
                                 to='/#contacts'
                                 smooth={true}
@@ -279,7 +279,7 @@ function Navbar() {
                                     </span>
                                 </div>
                             </NavLink>
-                        </Fade>
+                        </Fade>}
                     </div>
                 </div>
             </Drawer>
