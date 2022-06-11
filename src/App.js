@@ -19,6 +19,7 @@ function App() {
   const { theme } = useContext(ThemeContext);
 
   const blog = useSelector((state) => state.blog);
+  const header = useSelector((state) => state.header);
 
   console.log(
     "%cDEVELOPER PORTFOLIO",
@@ -38,10 +39,12 @@ function App() {
           <Route path="/" exact component={Main} />
           {blog.visible ? (
             <Route path="/blog" exact>
-              <BlogPage blogData={blog.data} />
+              <BlogPage blogData={blog.data} headerData={header.data} />
             </Route>
           ) : null}
-          <Route path="/projects" exact component={ProjectPage} />
+          <Route path="/projects" exact>
+            <ProjectPage headerData={header.data} />
+          </Route>
 
           <Redirect to="/" />
         </Switch>

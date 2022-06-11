@@ -16,7 +16,6 @@ import {
   Services,
   Achievement,
 } from "../../components";
-import { headerData } from "../../data/headerData";
 
 import { useSelector } from "react-redux";
 
@@ -27,11 +26,12 @@ function Main() {
   const contacts = useSelector((state) => state.contacts);
   const education = useSelector((state) => state.education);
   const experience = useSelector((state) => state.experience);
+  const header = useSelector((state) => state.header);
 
   return (
     <div>
       <Helmet>
-        <title>{headerData.name} - Porfolio</title>
+        <title>{header.data.name} - Porfolio</title>
       </Helmet>
 
       <Navbar

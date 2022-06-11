@@ -8,11 +8,10 @@ import { AiOutlineHome } from "react-icons/ai";
 import './BlogPage.css'
 import { SingleBlog } from '../../components'
 import { ThemeContext } from '../../contexts/ThemeContext';
-import { headerData } from '../../data/headerData'
 
 function BlogPage({
     blogData,
-    // headerData
+    headerData
 }) {
 
     const [search, setSearch] = useState('')

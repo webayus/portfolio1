@@ -9,9 +9,8 @@ import './ProjectPage.css'
 import { SingleProject } from '../../components';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { projectsData } from '../../data/projectsData'
-import { headerData } from '../../data/headerData'
 
-function ProjectPage() {
+function ProjectPage({headerData}) {
 
     const [search, setSearch] = useState('')
     const { theme } = useContext(ThemeContext);
