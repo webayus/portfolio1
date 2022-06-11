@@ -7,6 +7,7 @@ import educationReducer from "../reducers/education/educationSlice";
 import experienceReducer from "../reducers/experience/experienceSlice";
 import headerReducer from "../reducers/header/headerSlice";
 import projectsReducer from "../reducers/projects/projectsSlice";
+import servicesReducer from "../reducers/services/servicesSlice";
 
 export default configureStore({
   reducer: {
@@ -18,5 +19,6 @@ export default configureStore({
     experience: experienceReducer,
     header: headerReducer,
     projects: projectsReducer,
+    services: servicesReducer,
   },
 });
