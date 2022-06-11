@@ -9,6 +9,7 @@ import headerReducer from "../reducers/header/headerSlice";
 import projectsReducer from "../reducers/projects/projectsSlice";
 import servicesReducer from "../reducers/services/servicesSlice";
 import skillsReducer from "../reducers/skills/skillsSlice";
+import socialsReducer from "../reducers/socials/socialsSlice";
 
 export default configureStore({
   reducer: {
@@ -22,5 +23,6 @@ export default configureStore({
     projects: projectsReducer,
     services: servicesReducer,
     skills: skillsReducer,
+    socials: socialsReducer,
   },
 });
