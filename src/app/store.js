@@ -4,6 +4,7 @@ import blogReducer from "../reducers/blog/blogSlice";
 import achievementReducer from "../reducers/achievement/achievementSlice";
 import contactsReducer from "../reducers/contacts/contactsSlice";
 import educationReducer from "../reducers/education/educationSlice";
+import experienceReducer from "../reducers/experience/experienceSlice";
 
 export default configureStore({
   reducer: {
@@ -12,5 +13,6 @@ export default configureStore({
     blog: blogReducer,
     contacts: contactsReducer,
     education: educationReducer,
+    experience: experienceReducer,
   },
 });

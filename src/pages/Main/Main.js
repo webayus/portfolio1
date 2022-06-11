@@ -26,6 +26,7 @@ function Main() {
   const achievement = useSelector((state) => state.achievement);
   const contacts = useSelector((state) => state.contacts);
   const education = useSelector((state) => state.education);
+  const experience = useSelector((state) => state.experience);
 
   return (
     <div>
@@ -44,7 +45,7 @@ function Main() {
       {about.visible ? <About aboutData={about.data} /> : null}
       {education.visible ? <Education educationData={education.data} /> : null}
       <Skills />
-      <Experience />
+      {experience.visible ? <Experience experienceData={experience.data} /> : null}
       <Projects />
       {achievement.visible ? (
         <Achievement achievementData={achievement.data} />
