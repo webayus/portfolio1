@@ -20,6 +20,7 @@ function App() {
 
   const blog = useSelector((state) => state.blog);
   const header = useSelector((state) => state.header);
+  const projects = useSelector((state) => state.projects);
 
   console.log(
     "%cDEVELOPER PORTFOLIO",
@@ -43,7 +44,7 @@ function App() {
             </Route>
           ) : null}
           <Route path="/projects" exact>
-            <ProjectPage headerData={header.data} />
+            <ProjectPage projectsData={projects.data} headerData={header.data} />
           </Route>
 
           <Redirect to="/" />

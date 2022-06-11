@@ -27,6 +27,7 @@ function Main() {
   const education = useSelector((state) => state.education);
   const experience = useSelector((state) => state.experience);
   const header = useSelector((state) => state.header);
+  const projects = useSelector((state) => state.projects);
 
   return (
     <div>
@@ -36,7 +37,7 @@ function Main() {
 
       <Navbar
         about={about.visible}
-        education={true}
+        education={education.visible}
         services={true}
         contacts={contacts.visible}
         blog={blog.visible}
@@ -46,7 +47,7 @@ function Main() {
       {education.visible ? <Education educationData={education.data} /> : null}
       <Skills />
       {experience.visible ? <Experience experienceData={experience.data} /> : null}
-      <Projects />
+      {projects.visible ? <Projects projectsData={projects.data} />:null}
       {achievement.visible ? (
         <Achievement achievementData={achievement.data} />
       ) : null}
