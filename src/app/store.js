@@ -10,6 +10,7 @@ import projectsReducer from "../reducers/projects/projectsSlice";
 import servicesReducer from "../reducers/services/servicesSlice";
 import skillsReducer from "../reducers/skills/skillsSlice";
 import socialsReducer from "../reducers/socials/socialsSlice";
+import testimonialsReducer from "../reducers/testimonials/testimonialsSlice";
 
 export default configureStore({
   reducer: {
@@ -24,5 +25,6 @@ export default configureStore({
     services: servicesReducer,
     skills: skillsReducer,
     socials: socialsReducer,
+    testimonials: testimonialsReducer,
   },
 });

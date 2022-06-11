@@ -31,6 +31,7 @@ function Main() {
   const services = useSelector((state) => state.services);
   const skills = useSelector((state) => state.skills);
   const socials = useSelector((state) => state.socials);
+  const testimonials = useSelector((state) => state.testimonials);
 
   return (
     <div>
@@ -45,7 +46,7 @@ function Main() {
         contacts={contacts.visible}
         blog={blog.visible}
       />
-      <Landing headerData={header.data} socialsData={socials.data} />
+      <Landing headerData={header.data} socialsData={socials.data} contactsVisible={contacts.visible} />
       {about.visible ? <About aboutData={about.data} /> : null}
       {education.visible ? <Education educationData={education.data} /> : null}
       {skills.visible ? <Skills skillsData={skills.data} /> : null}
@@ -55,7 +56,7 @@ function Main() {
         <Achievement achievementData={achievement.data} />
       ) : null}
       {services.visible ? <Services servicesData={services.data} /> : null}
-      <Testimonials />
+      {testimonials.visible ? <Testimonials testimonialsData={testimonials.data} /> : null}
       {blog.visible ? <Blog blogData={blog.data} /> : null}
       {contacts.visible ? <Contacts /> : null}
       <Footer headerData={header.data} />

@@ -5,11 +5,10 @@ import Slider from 'react-slick';
 import { FaQuoteLeft, FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 
 import { ThemeContext } from '../../contexts/ThemeContext';
-import { testimonialsData } from '../../data/testimonialsData';
 
 import './Testimonials.css';
 
-function Testimonials() {
+function Testimonials({testimonialsData}) {
     const { theme } = useContext(ThemeContext);
     const sliderRef = useRef();
 

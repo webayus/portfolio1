@@ -14,7 +14,7 @@ import {
     FaBlogger,
 } from 'react-icons/fa';
 
-function Landing({headerData, socialsData}) {
+function Landing({headerData, socialsData,contactsVisible}) {
     const { theme, drawerOpen } = useContext(ThemeContext);
 
     const useStyles = makeStyles((t) => ({
@@ -180,9 +180,9 @@ function Landing({headerData, socialsData}) {
                                 spy='true'
                                 duration={2000}
                             >
-                                <Button className={classes.contactBtn}>
+                                {contactsVisible && <Button className={classes.contactBtn}>
                                     Contact
-                                </Button>
+                                </Button>}
                             </NavLink>
                         </div>
                     </div>
