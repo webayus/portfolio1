@@ -25,6 +25,7 @@ function Main() {
   const blog = useSelector((state) => state.blog);
   const achievement = useSelector((state) => state.achievement);
   const contacts = useSelector((state) => state.contacts);
+  const education = useSelector((state) => state.education);
 
   return (
     <div>
@@ -41,7 +42,7 @@ function Main() {
       />
       <Landing />
       {about.visible ? <About aboutData={about.data} /> : null}
-      <Education />
+      {education.visible ? <Education educationData={education.data} /> : null}
       <Skills />
       <Experience />
       <Projects />

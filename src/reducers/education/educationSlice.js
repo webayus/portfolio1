@@ -1,13 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { contactsData } from "../../data/contactsData";
+import { educationData } from "../../data/educationData";
 
 const initialState = {
   visible: false,
-  data: contactsData,
+  data: educationData,
 };
 
-export const contactsSlice = createSlice({
-  name: "contacts",
+export const educationSlice = createSlice({
+  name: "education",
   initialState,
   reducers: {
     save: (state, action) => {
@@ -20,6 +20,6 @@ export const contactsSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { save, clear } = contactsSlice.actions;
+export const { save, clear } = educationSlice.actions;
 
-export default contactsSlice.reducer;
+export default educationSlice.reducer;
