@@ -22,6 +22,7 @@ import { useSelector } from 'react-redux'
 
 function Main() {
   const about = useSelector((state) => state.about);
+  const blog = useSelector((state) => state.blog);
   const achievement = useSelector((state) => state.achievement);
 
   return (
@@ -30,7 +31,7 @@ function Main() {
         <title>{headerData.name} - Porfolio</title>
       </Helmet>
 
-      <Navbar about={about.visible} education={true} services={true} contacts={true} blog={true} />
+      <Navbar about={about.visible} education={true} services={true} contacts={true} blog={blog.visible} />
       <Landing />
       {about.visible ? <About aboutData={about.data} /> : null}
       <Education />
@@ -40,7 +41,7 @@ function Main() {
       {achievement.visible ? <Achievement achievementData={achievement.data}  /> : null}
       <Services />
       <Testimonials />
-      <Blog />
+      {blog.visible ? <Blog blogData={blog.data} /> : null}
       <Contacts />
       <Footer />
     </div>
