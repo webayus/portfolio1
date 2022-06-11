@@ -29,6 +29,7 @@ function Main() {
   const header = useSelector((state) => state.header);
   const projects = useSelector((state) => state.projects);
   const services = useSelector((state) => state.services);
+  const skills = useSelector((state) => state.skills);
 
   return (
     <div>
@@ -46,7 +47,7 @@ function Main() {
       <Landing />
       {about.visible ? <About aboutData={about.data} /> : null}
       {education.visible ? <Education educationData={education.data} /> : null}
-      <Skills />
+      {skills.visible ? <Skills skillsData={skills.data} /> : null}
       {experience.visible ? <Experience experienceData={experience.data} /> : null}
       {projects.visible ? <Projects projectsData={projects.data} />:null}
       {achievement.visible ? (

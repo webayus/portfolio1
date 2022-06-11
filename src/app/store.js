@@ -8,6 +8,7 @@ import experienceReducer from "../reducers/experience/experienceSlice";
 import headerReducer from "../reducers/header/headerSlice";
 import projectsReducer from "../reducers/projects/projectsSlice";
 import servicesReducer from "../reducers/services/servicesSlice";
+import skillsReducer from "../reducers/skills/skillsSlice";
 
 export default configureStore({
   reducer: {
@@ -20,5 +21,6 @@ export default configureStore({
     header: headerReducer,
     projects: projectsReducer,
     services: servicesReducer,
+    skills: skillsReducer,
   },
 });
