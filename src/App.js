@@ -41,7 +41,7 @@ function App() {
         ]
       );
       setLoading(false);
-    }, 2000);
+    }, 5000);
   }, [setTheme]);
 
   if (loading) {
