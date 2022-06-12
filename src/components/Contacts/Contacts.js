@@ -24,10 +24,9 @@ import { HiOutlineLocationMarker } from 'react-icons/hi';
 import { ThemeContext } from '../../contexts/ThemeContext';
 
 import { socialsData } from '../../data/socialsData';
-import { contactsData } from '../../data/contactsData';
 import './Contacts.css';
 
-function Contacts() {
+function Contacts({contactsData}) {
     const [open, setOpen] = useState(false);
 
     const [name, setName] = useState('');

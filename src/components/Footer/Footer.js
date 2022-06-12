@@ -1,9 +1,8 @@
 import React, { useContext } from 'react'
 import './Footer.css'
 import { ThemeContext } from '../../contexts/ThemeContext'
-import { headerData } from '../../data/headerData'
 
-function Footer() {
+function Footer({headerData}) {
 
     const shortname = (name) => {
         if(name.length > 10) {

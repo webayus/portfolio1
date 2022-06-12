@@ -3,13 +3,12 @@ import { Link } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 
 import { ThemeContext } from '../../contexts/ThemeContext';
-import { projectsData } from '../../data/projectsData'
 import { HiArrowRight } from "react-icons/hi";
 
 import './Projects.css'
 import SingleProject from './SingleProject/SingleProject';
 
-function Projects() {
+function Projects({projectsData}) {
 
     const { theme } = useContext(ThemeContext);
 

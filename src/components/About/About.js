@@ -2,13 +2,13 @@ import React, { useContext } from 'react';
 
 import './About.css';
 import { ThemeContext } from '../../contexts/ThemeContext';
-import { aboutData } from '../../data/aboutData'
 
 
 
-function About() {
+function About({aboutData}) {
 
     const { theme } = useContext(ThemeContext);
+
     return (
         <div className="about" id="about" style={{backgroundColor: theme.secondary}}>
             <div className="line-styling">

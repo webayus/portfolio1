@@ -5,11 +5,10 @@ import { HiArrowRight } from "react-icons/hi";
 
 import './Blog.css';
 import { ThemeContext } from '../../contexts/ThemeContext';
-import { blogData } from '../../data/blogData'
 import SingleBlog from './SingleBlog/SingleBlog';
 
 
-function Blog() {
+function Blog({blogData}) {
 
     const { theme } = useContext(ThemeContext);
 
