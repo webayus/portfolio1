@@ -13,24 +13,23 @@ import ScrollToTop from "./utils/ScrollToTop";
 
 import { useSelector } from "react-redux";
 
+import theme from "./theme/theme"
+
 import "./App.css";
 
 function App() {
-  const { theme } = useContext(ThemeContext);
+  const { setTheme } = useContext(ThemeContext);
 
   const blog = useSelector((state) => state.blog);
   const header = useSelector((state) => state.header);
   const projects = useSelector((state) => state.projects);
 
-  console.log(
-    "%cDEVELOPER PORTFOLIO",
-    `color:${theme.primary}; font-size:50px`
-  );
-  console.log(
-    "%chttps://github.com/hhhrrrttt222111/developer-portfolio",
-    `color:${theme.tertiary}; font-size:20px`
-  );
-  // console.log = console.warn = console.error = () => {};
+  // test theme change
+  React.useEffect(()=>{
+    setInterval(()=>{
+      setTheme(theme[Object.keys(theme)[Math.floor(Math.random() * Object.keys(theme).length | 0)]])
+    },1000)
+  },[setTheme])
 
   return (
     <div className="app">
