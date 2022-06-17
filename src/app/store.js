@@ -1,4 +1,4 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import aboutReducer from "../reducers/about/aboutSlice";
 import blogReducer from "../reducers/blog/blogSlice";
 import achievementReducer from "../reducers/achievement/achievementSlice";
@@ -27,4 +27,9 @@ export default configureStore({
     socials: socialsReducer,
     testimonials: testimonialsReducer,
   },
+  middleware: [
+    ...getDefaultMiddleware({
+      serializableCheck: false,
+    }),
+  ],
 });
