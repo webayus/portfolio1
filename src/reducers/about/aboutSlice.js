@@ -21,7 +21,8 @@ export const aboutSlice = createSlice({
   initialState,
   reducers: {
     save: (state, action) => {
-      state = action.payload;
+      state.visible = action.payload.visible;
+      state.data = action.payload.data;
     },
     clear: (state) => {
       state = initialState;
