@@ -2,6 +2,6 @@
 
 ## DEVELOP
 
-- [![Netlify Status](https://api.netlify.com/api/v1/badges/9f177c89-8c21-4fed-aa06-2d233ef580db/deploy-status)](https://app.netlify.com/sites/webayus-portfolio1/deploys)
+- [![Netlify Status](https://api.netlify.com/api/v1/badges/b94efcfe-17b7-4409-ab7b-d408b06e2657/deploy-status)](https://app.netlify.com/sites/webayus-admin/deploys)
 
 - [webayus-portfolio1](https://webayus-portfolio1.netlify.app/)
